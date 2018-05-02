@@ -66,4 +66,4 @@ for i in range(100):
 		cganofalse = cganofalse+1
 		
 
-	
+print "la probabilidad de ganar con cambio de puerta es:",cganotrue,"la probabilidad de ganar sin cambio de puerta es:", cganofalse	
