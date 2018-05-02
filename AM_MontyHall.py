@@ -25,7 +25,7 @@ def finish_game(lista,choice,change):
 	if(change == False):
 		return lista[choice]
 	if(change == True):
-		for i in range(lista):
+		for i in range(len(lista)):
 			if((lista[i] != 'GOAT_MONTY') and (i != choice)):
 				return lista[i]
 
@@ -48,9 +48,9 @@ for i in range(100):
 for i in range(100):
 	listy2 = sort_doors()
 	n2 = choose_door()
-	rta2 = reveal_door(listy,n)
-	rta4 = finish_game(rta2,n,False)
-	listtrue.append(rta4)
+	rta2 = reveal_door(listy2,n2)
+	rta4 = finish_game(rta2,n2,False)
+	listfalse.append(rta4)
 
 cganotrue = 0	
 cganofalse = 0
@@ -62,8 +62,7 @@ for i in range(100):
 
 #Ciclo que cuenta cuantaa veces gano con false
 for i in range(100):
-	if (listtrue[i] == 'car'):
+	if (listfalse[i] == 'car'):
 		cganofalse = cganofalse+1
 		
-
-print "la probabilidad de ganar con cambio de puerta es:",cganotrue,"la probabilidad de ganar sin cambio de puerta es:", cganofalse	
+print "la probabilidad de ganar con cambio de puerta es:",cganotrue,"la probabilidad de ganar sin cambio de puerta es:", cganofalse
